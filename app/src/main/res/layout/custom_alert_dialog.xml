@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <ImageView
+        android:id="@+id/imgAlert"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_launcher_background"
+        android:background="#FFCDD2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtSuccessful"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order Placed successfully"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/txtShortMgs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Short Message Display Here.."
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/btnDismissAlert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dismiss Custom AlertDialog"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"/>
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

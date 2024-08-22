@@ -1,7 +1,9 @@
 package com.example.alertdialogapp;
 
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 import android.window.OnBackInvokedDispatcher;
@@ -29,6 +31,25 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+
+//        Button btnDisplayAlert = findViewById(R.id.btnCustomAlert);
+
+                Dialog dialog = new Dialog(MainActivity.this);
+                dialog.setContentView(R.layout.custom_alert_dialog);
+                dialog.setCancelable(false);
+
+                Button dismiss = dialog.findViewById(R.id.btnDismissAlert);
+
+                dismiss.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+
+                dialog.show();
+
 
 
 //        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
@@ -68,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Yeah is get clicked....", Toast.LENGTH_SHORT).show();
                     }
                 })
-                .setNegativeButton("Delete", new DialogInterface.OnClickListener() {
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Toast.makeText(MainActivity.this, "Delete is get clicked...", Toast.LENGTH_SHORT).show();
